@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Waldo's Travel - Destinos</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/destino.css">
+    </head>
+
+    <body>
+        <!-- Checkbox para controlar el modo oscuro -->
+        <input type="checkbox" id="dark-mode-toggle" class="sr-only" aria-hidden="true" tabindex="-1">
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Logo de la agencia -->
+                <a href="index.html" class="logo">Waldo's Travel</a>
+                <!-- Opciones del menú principal-->
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="has-mega-menu">
+                            <a href="destino.html">Destinos</a>
+                            <!-- Sub menu -->
+                            <div class="mega-menu">
+                                <div class="mega-menu-column">
+                                    <h4>Nacionales</h4>
+                                    <ul aria-label="Destinos en Europa">
+                                        <li><a href="#">Córdoba</a></li>
+                                        <li><a href="#">Tierra del Fuego</a></li>
+                                        <li><a href="#">San Juan</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Internacionales</h4>
+                                    <ul aria-label="Destinos en Asia">
+                                        <li><a href="#">Colombia</a></li>
+                                        <li><a href="#">Cancún</a></li>
+                                        <li><a href="#">Brasil</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="precios.html">Membresías</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <!-- Botón para alternar el modo oscuro -->
+                <label for="dark-mode-toggle" class="dark-mode-btn" role="button" tabindex="0" aria-label="Alternar modo oscuro">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="section-title">Explora Nuestros Destinos</h1>
+            <!-- Sistema de Filtrado-->
+            <section class="filtros" aria-label="Filtro de categorías de destinos">
+                <!-- Inputs tipo radio para el control de filtros-->
+                    <input type="radio" id="all" name="category" checked>
+                    <label for="all">Todos</label>
+                    <input type="radio" id="cultural" name="category">
+                    <label for="cultural">Cultural</label>
+                    <input type="radio" id="naturaleza" name="category">
+                    <label for="naturaleza">Naturaleza</label>
+                    <input type="radio" id="playa" name="category">
+                    <label for="playa">Playa</label>
+                    <input type="radio" id="gastronomico" name="category">
+                    <label for="gastronomico">Gastronomico</label>
+                    <input type="radio" id="religioso" name="category">
+                    <label for="religioso">Religioso</label>
+
+                <!-- Galería tipo Masonry-->
+                <div class="galeria-masonry">
+                    <article class="cultural">
+                        <img src="../assets/img/bariloche.webp" alt="Bariloche" >
+                        <div class="card">
+                            <h3>Bariloche</h3>
+                            <p>Historia y cultura (Museo de la Patagonia).</p>
+                            <p class="descripcion-breve">Arquitectura alpina suiza y el mejor chocolate artesanal.</p>
+                        </div>
+                    </article>
+
+                    <article class="naturaleza">
+                        <img src="../assets/img/cordoba.webp" alt="Cordoba">
+                        <div class="card">
+                            <h3>Cordoba</h3>
+                            <p>Paisajes imponentes y glaciares.</p>
+                            <p class="descripcion-breve">Sierras, ríos cristalinos y rica vida cultural.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="cultural">
+                        <img src="../assets/img/San juan.webp" alt="San juan" >
+                        <div class="card">
+                            <h3>San Juan</h3>
+                            <p>Historia y cultura (Museo de la Patagonia).</p>
+                            <p class="descripcion-breve">Paisajes asombrosos en el Valle de la Luna y excelentes viñedos.</p>
+                        </div>
+                    </article>
+
+                    <article class="playa">
+                        <img src="../assets/img/brasil,rio.webp" alt="Brasil">
+                        <div class="card">
+                            <h3>Brasil</h3>
+                            <p>Descanso y mar.</p>
+                            <p class="descripcion-breve">Playas paradisíacas, clima tropical y una cultura vibrante.</p>
+                        </div>
+                    </article>
+
+                    <article class="cultural">
+                        <img src="../assets/img/san luis.webp" alt="San luis" >
+                        <div class="card">
+                            <h3>San Luis</h3>
+                            <p>Historia y cultura (Museo de la Patagonia).</p>
+                            <p class="descripcion-breve">Microclimas ideales, sierras onduladas y deportes de aventura.</p>
+                        </div>
+                    </article>
+
+                    <article class="naturaleza">
+                        <img src="../assets/img/patagonia.webp" alt="Patagonia">
+                        <div class="card">
+                            <h3>Patagonia</h3>
+                            <p>Paisajes imponentes y glaciares.</p>
+                            <p class="descripcion-breve">Inmensidad de glaciares eternos y lagos de aguas turquesas.</p>
+                        </div>
+                    </article>
+
+                    <article class="playa">
+                        <img src="../assets/img/buenos aires.webp" alt="Buenos aires">
+                        <div class="card">
+                            <h3>Buenos Aires</h3>
+                            <p>Descanso y mar.</p>
+                            <p class="descripcion-breve">Vibrante vida nocturna, tango y el pintoresco polo gastronómico.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="gastronomico">
+                        <img src="../assets/img/lima.webp" alt="Lima">
+                        <div class="card">
+                            <h3>Lima</h3>
+                            <p>Capital gastronómica de América.</p>
+                            <p class="descripcion-breve">Centro colonial y hermosos malecones junto al mar.</p>
+                        </div>
+                    </article>
+
+                    <article class="naturaleza">
+                        <img src="../assets/img/tierra del fuego.webp" alt="Tierra del fuego">
+                        <div class="card">
+                            <h3>Tierra del fuego</h3>
+                            <p>Paisajes imponentes y glaciares.</p>
+                            <p class="descripcion-breve">Aventúrate al Fin del Mundo navegando el mítico Canal Beagle.</p>
+                        </div>
+                    </article>
+
+                    <article class="religioso">
+                        <img src="../assets/img/jerusalem.webp" alt="Jerusalén">
+                        <div class="card">
+                            <h3>Jerusalén</h3>
+                            <p>Cuna de religiones milenarias.</p>
+                            <p class="descripcion-breve">Ciudad milenaria sagrada donde convergen culturas del mundo.</p>
+                        </div>
+                    </article>
+
+                    <article class="playa">
+                        <img src="../assets/img/cancun.webp" alt="Cancun">
+                        <div class="card">
+                            <h3>Cancun</h3>
+                            <p>Descanso y mar.</p>
+                            <p class="descripcion-breve">Mar Caribe turquesa, playas de arena blanca y cenotes mayas.</p>
+                        </div>
+                    </article>
+
+                    <article class="gastronomico">
+                        <img src="../assets/img/colombia.webp" alt="Colombia">
+                        <div class="card">
+                            <h3>Colombia</h3>
+                            <p>Capital gastronómica de América.</p>
+                            <p class="descripcion-breve">Café excepcional, cálida gente y biodiversidad alucinante.</p>
+                        </div>
+                    </article>
+
+                    <article class="religioso">
+                        <img src="../assets/img/roma.webp" alt="Roma">
+                        <div class="card">
+                            <h3>Roma</h3>
+                            <p>Cuna de religiones milenarias.</p>
+                            <p class="descripcion-breve">Museo al aire libre rebosante de historia épica y romanticismo.</p>
+                        </div>
+                    </article>
+
+                    <article class="cultural">
+                        <img src="../assets/img/malvinas.webp" alt="Malvinas">
+                        <div class="card">
+                            <h3>Malvinas</h3>
+                            <p>Historia de la guerra de Malvinas.</p>
+                            <p class="descripcion-breve">Naturaleza agreste, pingüinos y una historia imborrable.</p>
+                        </div>
+                    </article>
+                </div>
+            <!-- Tabla Responsiva de Precios y Destinos -->
+                <h2>Tarifas y Destinos</h2>
+                <div class="tablas" tabindex="0" aria-label="Tabla de precios de los destinos">
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Categoría</th>
+                                <th>Duración</th>
+                                <th>Precio (USD)</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cultural">
+                                <td data-label="Destino">Bariloche</td>
+                                <td data-label="Categoría">Cultural</td>
+                                <td data-label="Duración">7 Días</td>
+                                <td data-label="Precio (USD)">$1,200</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="cultural">
+                                <td data-label="Destino">San Juan</td>
+                                <td data-label="Categoría">Cultural</td>
+                                <td data-label="Duración">7 Días</td>
+                                <td data-label="Precio (USD)">$1,200</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="cultural">
+                                <td data-label="Destino">San Luis</td>
+                                <td data-label="Categoría">Cultural</td>
+                                <td data-label="Duración">7 Días</td>
+                                <td data-label="Precio (USD)">$1,200</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="playa">
+                                <td data-label="Destino">Brasil</td>
+                                <td data-label="Categoría">Sol y Playa</td>
+                                <td data-label="Duración">10 Días</td>
+                                <td data-label="Precio (USD)">$3,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="playa">
+                                <td data-label="Destino">Cancun</td>
+                                <td data-label="Categoría">Sol y Playa</td>
+                                <td data-label="Duración">10 Días</td>
+                                <td data-label="Precio (USD)">$3,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="playa">
+                                <td data-label="Destino">Buenos Aires</td>
+                                <td data-label="Categoría">Sol y Playa</td>
+                                <td data-label="Duración">10 Días</td>
+                                <td data-label="Precio (USD)">$3,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="gastronomico">
+                                <td data-label="Destino">Lima</td>
+                                <td data-label="Categoría">Gastronómico</td>
+                                <td data-label="Duración">5 Días</td>
+                                <td data-label="Precio (USD)">$800</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="gastronomico">
+                                <td data-label="Destino">Colombia</td>
+                                <td data-label="Categoría">Gastronómico</td>
+                                <td data-label="Duración">5 Días</td>
+                                <td data-label="Precio (USD)">$800</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="naturaleza">
+                                <td data-label="Destino">Patagonia</td>
+                                <td data-label="Categoría">Naturaleza</td>
+                                <td data-label="Duración">8 Días</td>
+                                <td data-label="Precio (USD)">$1,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="naturaleza">
+                                <td data-label="Destino">Tierra del Fuego</td>
+                                <td data-label="Categoría">Naturaleza</td>
+                                <td data-label="Duración">8 Días</td>
+                                <td data-label="Precio (USD)">$1,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="cultural">
+                                <td data-label="Destino">Malvinas</td>
+                                <td data-label="Categoría">Cultural</td>
+                                <td data-label="Duración">5 Días</td>
+                                <td data-label="Precio (USD)">$2,500</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="religioso">
+                                <td data-label="Destino">Jerusalén</td>
+                                <td data-label="Categoría">Religioso</td>
+                                <td data-label="Duración">14 Días</td>
+                                <td data-label="Precio (USD)">$5,000</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                            <tr class="religioso">
+                                <td data-label="Destino">Roma</td>
+                                <td data-label="Categoría">Religioso</td>
+                                <td data-label="Duración">14 Días</td>
+                                <td data-label="Precio (USD)">$5,000</td>
+                                <td data-label="Acción"><button aria-label="Reservar este destino">Reservar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-grid">
+
+                <!--Formulario para suscribirse a un newsletter.-->
+                <div class="newsletter">
+                    <h3>Suscríbete a nuestra crónica</h3>
+                    <p>Recibe nuestras ediciones exclusivas e historias cautivadoras todos los viernes en tu buzón de correo.</p>
+                    <form class="subscribe-form">
+                        <label for="email" class="sr-only">Rellena tu correo electrónico</label>
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-submit">Suscribir</button>
+                    </form>
+                </div>
+                <!--Enlaces a redes sociales.-->
+                <div class="social-links">
+                    <h3>Conecta con la comunidad</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" aria-label="Ir a nuestra página oficial de Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/?lang=es" aria-label="Ir a nuestro equipo en X (Twitter)">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" aria-label="Sigue nuestros viajes en Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 11.806-2.806 1.44 1.44 0 01-.806 2.806z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!--Mapa interactivo-->
+                <div class="map-container">
+                    <h3>Sede Central</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.066870028212!2d-58.3815704!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11be22f1ce14c457!2sObelisco!5e0!3m2!1ses!2sar!4v1684343123456!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa interactivo de la oficina central en Buenos Aires"></iframe>
+                </div>
+            </div>
+            <!--Mapa interactivo-->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Waldo's Travel. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
