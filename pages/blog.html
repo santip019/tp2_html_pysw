@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Editorial | The Traveler Magazine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estiloBlog.css">
+</head>
+<body>
+
+    <!-- Spinner de carga -->
+    <div class="loader-container" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toggle modo oscuro -->
+    <input type="checkbox" id="dark-mode-toggle" class="sr-only" aria-label="Activar modo oscuro">
+
+    <!-- Filtros de categoría -->
+    <input type="radio" id="tag-all"       name="filter" checked class="sr-only">
+    <input type="radio" id="tag-argentina" name="filter"         class="sr-only">
+    <input type="radio" id="tag-patagonia" name="filter"         class="sr-only">
+    <input type="radio" id="tag-america"   name="filter"         class="sr-only">
+    <input type="radio" id="tag-mundo"     name="filter"         class="sr-only">
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Waldo's Travel</a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-mega-menu">
+                        <a href="destinos.html">Destinos</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-column">
+                                <h4>Nacionales</h4>
+                                <ul aria-label="Destinos en Europa">
+                                    <li><a href="#">Córdoba</a></li>
+                                    <li><a href="#">Tierra del Fuego</a></li>
+                                    <li><a href="#">San Juan</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Internacionales</h4>
+                                <ul aria-label="Destinos en Asia">
+                                    <li><a href="#">Colombia</a></li>
+                                    <li><a href="#">Cancún</a></li>
+                                    <li><a href="#">Brasil</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="precios.html">Membresías</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <label for="dark-mode-toggle" class="dark-mode-btn" role="button" tabindex="0" aria-label="Alternar modo oscuro">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <div class="app-wrapper">
+
+        <!-- HEADER -->
+        <header class="header-mag snap-section">
+            <div class="header-content">
+                <svg class="logo-svg" viewBox="0 0 100 100" aria-label="Logo">
+                    <circle cx="50" cy="50" r="45" class="logo-circle"/>
+                    <path d="M30 50 L70 50 M50 30 L50 70" class="logo-lines"/>
+                </svg>
+                <span class="eyebrow">Reportajes a Fondo — Edición 2026</span>
+                <h1>The Editorial <span class="italic">Traveler</span></h1>
+                <p class="header-sub">Crónicas extensas, reseñas profundas y fotografía documental de los destinos más apasionantes del mundo.</p>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="container snap-section">
+
+            <!-- Filtros -->
+            <nav class="filter-nav" aria-label="Filtrar por región">
+                <label for="tag-all"       class="filter-btn">Explorar Todo</label>
+                <label for="tag-argentina" class="filter-btn">Argentina</label>
+                <label for="tag-patagonia" class="filter-btn">Patagonia</label>
+                <label for="tag-america"   class="filter-btn">Latinoamérica</label>
+                <label for="tag-mundo"     class="filter-btn">Mundo</label>
+            </nav>
+
+            <section class="news-grid">
+
+                <!-- 1. BUENOS AIRES — Grande -->
+                <article class="card article-lg argentina reveal-on-scroll">
+                    <div class="card-img-wrapper clip-complex">
+                        <img src="https://plus.unsplash.com/premium_photo-1697729901052-fe8900e24993?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Obelisco y Avenida 9 de Julio, Buenos Aires" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Metrópolis Cultural</span>
+                        <h2>Buenos Aires: La Ciudad que Nunca Termina de Presentarse</h2>
+                        <div class="author-meta">Por Valentina Ríos &nbsp;|&nbsp; 15 min de lectura</div>
+                        <p class="drop-cap">Buenos Aires es tango, asado, psicoanálisis y Borges juntos en una contradicción que funciona. San Telmo con sus adoquines coloniales y anticuarios, el MALBA con sus Fridas, la Recoleta donde descansa Eva Perón: cada barrio cuenta una historia de una ciudad que nunca duerme porque siempre tiene algo que decir.</p>
+                        <blockquote class="editorial-quote">"Buenos Aires te enamora y te desespera en partes iguales. Es la única ciudad donde el camarero te da la razón pero no te trae lo que pediste."</blockquote>
+                    </div>
+                </article>
+
+                <!-- 2. BARILOCHE — Mediano -->
+                <article class="card article-md patagonia reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1652254048339-6c50e7cc26ac?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Lago Nahuel Huapi y montañas nevadas, Bariloche" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Naturaleza & Aventura</span>
+                        <h3>Bariloche: Donde los Lagos Aprenden a Ser Espejos</h3>
+                        <div class="author-meta">Por Lucía Fontán &nbsp;|&nbsp; 12 min de lectura</div>
+                        <p class="drop-cap">Bariloche es Suiza en la Patagonia argentina: un lago de 550 kilómetros cuadrados rodeado de montañas nevadas. El Cerro Catedral ofrece 100 km de pistas, el Circuito Chico bordea lagos majestuosos, y al amanecer sobre el Nahuel Huapi descubrirás que aquí la escala lo redefine todo.</p>
+                    </div>
+                </article>
+
+                <!-- 3. TIERRA DEL FUEGO — Mediano -->
+                <article class="card article-md patagonia reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1727791174121-835760e60cd4?q=80&w=985&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Canal Beagle y montañas nevadas, Ushuaia, Tierra del Fuego" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">El Fin del Mundo</span>
+                        <h3>Tierra del Fuego: Al Sur de Todo lo que Conocías</h3>
+                        <div class="author-meta">Por Rodrigo Paz &nbsp;|&nbsp; 15 min de lectura</div>
+                        <p class="drop-cap">A 54° de latitud sur, Ushuaia es la ciudad más austral del mundo. El Canal Beagle te lleva a colonias de lobos marinos, pingüinos de Magallanes y orcas. El Parque Nacional marca donde termina el mundo conocido: solo cielo, naturaleza y silencio absoluto.</p>
+                        <div class="rating" aria-label="5 estrellas de 5">★★★★★ <span class="rating-text">Destino Único</span></div>
+                    </div>
+                </article>
+
+                <!-- 4. CÓRDOBA — Grande -->
+                <article class="card article-lg argentina reveal-on-scroll">
+                    <div class="card-img-wrapper clip-complex">
+                        <img src="https://images.unsplash.com/photo-1610995195985-7229a1409d4b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Plaza San Martín y Catedral, Córdoba, Argentina" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Historia & Cultura Viva</span>
+                        <h2>Córdoba: La Docta que Nunca Dejó de Preguntar</h2>
+                        <div class="author-meta">Por Ignacio Herrera &nbsp;|&nbsp; 12 min de lectura</div>
+                        <p class="drop-cap">Córdoba tiene cuatro siglos de historia universitaria y se nota en todo: en la forma en que la gente discute, en la densidad de librerías por barrio, en el hecho de que a las dos de la mañana de un martes los bares de Nueva Córdoba estén llenos de estudiantes debatiendo filosofía, política y fútbol con idéntica pasión. La segunda ciudad más grande de Argentina no compite con Buenos Aires; simplemente no le interesa. Tiene su propia identidad, su propio idioma —el tonito cordobés— y su propia forma de tomarse la vida: con menos urgencia y más certeza.</p>
+                        <p>La Manzana Jesuítica —Patrimonio de la Humanidad desde 2000— es el corazón histórico de la ciudad. La Iglesia de la Compañía de Jesús, construida entre 1640 y 1671 sin un solo clavo de hierro, es una obra maestra del barroco americano. Su techumbre de madera en forma de casco de barco invertido fue considerada estructuralmente imposible por los ingenieros de la época y sin embargo lleva tres siglos y medio en pie. La Universidad Nacional de Córdoba, fundada en 1613 —la más antigua de Argentina— albergó la Reforma Universitaria de 1918, que transformó la educación superior latinoamericana para siempre.</p>
+                        <blockquote class="editorial-quote">"En Córdoba uno aprende que la historia no es un ornamento para los turistas; es el combustible que mueve a los vivos. Cada piedra colonial tiene un argumento que dar, y los cordobeses lo saben perfectamente."</blockquote>
+                        <p>Las Sierras de Córdoba constituyen un mundo aparte. A apenas una hora del centro urbano, el Valle de Punilla y el Valle de Calamuchita ofrecen un sistema de serranías suaves con ríos cristalinos y pueblos serranos que merecen cada uno una visita extensa.</p>
+                    </div>
+                </article>
+
+                <!-- 5. PATAGONIA — Mediano -->
+                <article class="card article-md patagonia reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552751753-0fc84ae5b6c8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Glaciar Perito Moreno, El Calafate, Patagonia argentina" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Glaciares & Estepa</span>
+                        <h3>Patagonia: El Territorio Donde la Escala se Redefine</h3>
+                        <div class="author-meta">Por Camila Saenz &nbsp;|&nbsp; 22 min de lectura</div>
+                        <p class="drop-cap">El Glaciar Perito Moreno es la pared de hielo más impresionante de América: 60 metros sobre el agua, 170 bajo ella. Ver cómo desprendimientos de hielo de 700 años de antigüedad caen al lago es sentir el tiempo geológico en tiempo real. La Patagonia redefine todas tus escalas de comprensión.</p>
+                    </div>
+                </article>
+
+                <!-- 6. MALVINAS — Mediano -->
+                <article class="card article-md argentina reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1673369965024-979e1d26b779?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Costa atlántica patagónica, acantilados y mar del sur" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Memoria e Identidad</span>
+                        <h3>Malvinas: El Horizonte que Duele y que Define</h3>
+                        <div class="author-meta">Por Sofía Valdés &nbsp;|&nbsp; 20 min de lectura</div>
+                        <p class="drop-cap">Las Malvinas: 570 km de la Patagonia. Pingüinos, albatros, elefantes marinos. Para los argentinos no es sólo geografía: es identidad, dolor de 1982, reivindicación constante. El cementerio de Darwin es uno de los espacios de memoria más sobrecogedores del planeta.</p>
+                    </div>
+                </article>
+
+                <!-- 7. SAN LUIS — Mediano -->
+                <article class="card article-md argentina reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://emountain.tur.ar/Merlo/Images/sierraquijadas.jpg"
+                             alt="Formaciones rocosas rojizas en paisaje árido de montaña, San Luis" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Naturaleza Árida</span>
+                        <h3>San Luis: El Secreto Mejor Guardado de los Llanos Argentinos</h3>
+                        <div class="author-meta">Por Martín Quiroga &nbsp;|&nbsp; 18 min de lectura</div>
+                        <p class="drop-cap">San Luis guarda las cartas fuertes: la Sierra de las Quijadas con formaciones de arenisca roja de 120 millones de años. Al atardecer, los colores rojos y naranjas rivalizan con el Grand Canyon. La zona de Merlo tiene la calidad de aire más pura certificada de Argentina.</p>
+                        <div class="rating" aria-label="4 estrellas de 5">★★★★☆ <span class="rating-text">Joya Escondida</span></div>
+                    </div>
+                </article>
+
+                <!-- 8. SAN JUAN — Mediano -->
+                <article class="card article-md argentina reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1614586125858-e695dd97d1b6?q=80&w=903&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Cordillera de los Andes, picos nevados y valles áridos de altura" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Vino & Alta Montaña</span>
+                        <h3>San Juan: Donde la Vid Desafía a los Andes</h3>
+                        <div class="author-meta">Por Ana Lucía Pérez &nbsp;|&nbsp; 20 min de lectura</div>
+                        <p class="drop-cap">San Juan produce el 20% del vino argentino pero vive a la sombra de Mendoza. Sus valles de Ullum y Calingasta con especialización en Syrah y Torrontés son extraordinarios. El Valle de la Luna contiene los fósiles del Triásico más importantes del mundo.</p>
+                    </div>
+                </article>
+
+                <!-- 9. BRASIL — Grande -->
+                <article class="card article-lg america reveal-on-scroll">
+                    <div class="card-img-wrapper clip-complex">
+                        <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=1200"
+                             alt="Cristo Redentor, Río de Janeiro, Brasil" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Trópico & Diversidad</span>
+                        <h2>Brasil: El Continente que Aprendió a Bailar</h2>
+                        <div class="author-meta">Por Carolina Mello &nbsp;|&nbsp; 14 min de lectura</div>
+                        <p class="drop-cap">Brasil es un continente disfrazado de república: 8,5 millones de kilómetros cuadrados, 200 millones de personas, una cultura que absorbe influencias de todo el mundo. Río de Janeiro con el Cristo Redentor es el símbolo, pero la Amazonia regula el clima de América del Sur y el Nordeste guarda una identidad afrobahiana única.</p>
+                    </div>
+                </article>
+
+                <!-- 10. LIMA — Mediano -->
+                <article class="card article-md america reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?q=80&w=906&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Miraflores al atardecer, Lima, Perú — acantilados sobre el Pacífico" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Capital Gastronómica</span>
+                        <h3>Lima: La Ciudad que Convirtió el Ceviche en Alta Filosofía</h3>
+                        <div class="author-meta">Por Diego Vargas &nbsp;|&nbsp; 22 min de lectura</div>
+                        <p class="drop-cap">Lima es la capital gastronómica de América Latina. Central, el mejor restaurante del mundo en 2023, organiza su menú por altitudes desde el mar hasta los Andes. Pero Lima es también mercados, ceviches de barrio, anticuchos: una identidad culinaria que atraviesa todas las clases.</p>
+                    </div>
+                </article>
+
+                <!-- 11. CANCÚN — Mediano -->
+                <article class="card article-md america reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?q=80&w=800"
+                             alt="Playa Delfines, Cancún, México — Caribe turquesa y arena blanca" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Caribe & Cultura Maya</span>
+                        <h3>Cancún: Más Allá de la Zona Hotelera Hay un Mundo Maya</h3>
+                        <div class="author-meta">Por Fernanda López &nbsp;|&nbsp; 10 min de lectura</div>
+                        <p class="drop-cap">Cancún trasciende los buffets infinitos. Es la puerta a la Riviera Maya, cenotes sagrados, ruinas mayas. El Mar Caribe tiene un turquesa imposible, el arrecife de Cozumel es uno de los mejores acuarios del mundo, y los cenotes como Ik-Kil son destinos de buceo sin parangón.</p>
+                    </div>
+                </article>
+
+                <!-- 12. COLOMBIA — Grande -->
+                <article class="card article-lg america reveal-on-scroll">
+                    <div class="card-img-wrapper clip-complex">
+                        <img src="https://images.unsplash.com/photo-1770808564556-7bc511b893a2?q=80&w=778&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Cartagena de Indias, murallas coloniales y catedral" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Renacimiento Cultural</span>
+                        <h2>Colombia: El País que Aprendió a Contarse a Sí Mismo</h2>
+                        <div class="author-meta">Por Sebastián Torres &nbsp;|&nbsp; 10 min de lectura</div>
+                        <p class="drop-cap">Cartagena es la belleza congelada: murallas amuralladas coloniales, Caribe encendiéndose de naranja al atardecer, callejones donde la arquitectura española se suspende en el tiempo. Medellín es la transformación: de ciudad más violenta del mundo a referente mundial en innovación urbana, metrocables que suben a los barrios marginados y los convierte en destinos culturales. Colombia es la paradoja de que la narrativa internacional fue narcotráfico y violencia; la realidad hoy es un país que metaboliza su pasado complejo con una madurez extraordinaria y construye su futuro con una energía que sorprende a quienes llegan por primera vez.</p>
+                    </div>
+                </article>
+
+                <!-- 13. JERUSALÉN — Mediano -->
+                <article class="card article-md mundo reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1614517453351-6c1522fc7a56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Cúpula de la Roca y Muro de los Lamentos, Jerusalén al amanecer" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">Ciudad Santa</span>
+                        <h3>Jerusalén: Tres Religiones, Tres Cielos, Una Sola Ciudad</h3>
+                        <div class="author-meta">Por Ariel Sosa &nbsp;|&nbsp; 26 min de lectura</div>
+                        <p class="drop-cap">Jerusalén es la única ciudad del mundo donde tres de las grandes religiones monoteístas reclaman simultáneamente su punto más sagrado. El judío llora frente al Muro de las Lamentaciones, lo más cerca que puede estar del Templo destruido. El cristiano recorre la Vía Dolorosa convencido de estar pisando las mismas piedras que Cristo cargando la cruz. El musulmán ora mirando hacia la Cúpula de la Roca, desde donde según la tradición islámica el Profeta ascendió al cielo en su viaje nocturno. Estas tres certezas coexisten en un recinto de menos de un kilómetro cuadrado desde hace dos mil años. El hecho de que esto sea posible es, en sí mismo, un milagro laico.</p>
+                        <p>La Ciudad Vieja está dividida en cuatro cuartos: Judío, Cristiano, Musulmán y Armenio. Caminar entre ellos es atravesar capas de tiempo con la densidad de un libro de historia encarnado en piedra. El Cuartel Cristiano, con la Basílica del Santo Sepulcro como epicentro, huele a incienso desde un kilómetro antes de llegar. El Cuartel Musulmán tiene la energía de un zoco medieval en pleno funcionamiento: especias, telas, dulces de sésamo, llamadas al rezo que se superponen desde los minaretes a distintas horas del día.</p>
+                        <div class="rating" aria-label="5 estrellas de 5">★★★★★ <span class="rating-text">Experiencia Única en el Mundo</span></div>
+                        <p>El Muro de los Lamentos al amanecer del viernes con los judíos ortodoxos llegando para el Shabbat; el llamado del muecín desde la Mezquita de Al-Aqsa al alba del sábado; las procesiones franciscanas del Via Crucis los viernes en la Vía Dolorosa: Jerusalén tiene una programación espiritual más densa que cualquier festival de cultura del mundo, y se repite semana tras semana desde hace siglos. Ninguna ciudad concentra tanta historia sagrada en tan poco espacio.</p>
+                    </div>
+                </article>
+
+                <!-- 14. ROMA — Mediano -->
+                <article class="card article-md mundo reveal-on-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=796&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Coliseo romano al atardecer, Roma, Italia — luz dorada sobre la piedra" class="real-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="category">La Ciudad Eterna</span>
+                        <h3>Roma: Dos Mil Años de Belleza que Aún No Terminan</h3>
+                        <div class="author-meta">Por Isabella Moretti &nbsp;|&nbsp; 24 min de lectura</div>
+                        <p class="drop-cap">Roma es la única ciudad que no necesita presentación y que sin embargo te sorprende en cada esquina como si fuera la primera vez. Cada calle del centro histórico es un palimpsesto temporal: sobre los cimientos romanos del siglo I construyeron los medievales, sobre esos los renacentistas, sobre esos los barrocos, y encima de toda esa estratigrafía histórica camina hoy un romano que va a comprar el cornetto y el cappuccino de la mañana como si toda esa belleza fuera el decorado natural de la vida cotidiana. Y quizás lo es.</p>
+                        <p>El Coliseo, terminado en el año 80 d.C. bajo el emperador Tito, sigue siendo la estructura de entretenimiento más grande jamás construida: capacidad para hasta 80.000 espectadores, 188 metros de diámetro, cuatro niveles de arcadas de piedra travertina y concreto romano que han sobrevivido terremotos, saqueos medievales y dos milenios de erosión. Entrar al Coliseo en las primeras horas de la mañana produce una compresión temporal extraordinaria: la arena donde murieron gladiadores está a tus pies, y los arcos que enmarcaban las 76 entradas del público siguen en pie con una dignidad que el tiempo no pudo doblegar.</p>
+                        <blockquote class="editorial-quote">"Los romanos tenían un concepto que no hemos podido superar: la belleza pública como responsabilidad cívica. Cada fuente, cada plaza, cada cúpula de Roma fue construida para que la ciudad fuera mejor para todos. Eso es civilización."</blockquote>
+                        <p>El Vaticano concentra en 44 hectáreas la mayor colección de arte occidental del mundo. Los Museos Vaticanos rematan en la Capilla Sixtina donde Miguel Ángel tardó cuatro años en pintar un techo que dos millones de personas al año visitan con el cuello doblado. La Basílica de San Pedro, con su columnata de Bernini abrazando la plaza como dos brazos abiertos, es el espacio arquitectónico más grandioso del catolicismo. Subir a la cúpula —531 escalones— y ver Roma desde los 136 metros de altura es verla como la vería un dios romano satisfecho con su obra.</p>
+                    </div>
+                </article>
+
+            </section><!-- /news-grid -->
+
+            <!-- COMENTARIOS -->
+            <section class="comments-section snap-section reveal-on-scroll" aria-label="Comentarios de lectores">
+                <h2>Diario del Lector <span class="comment-count">(4)</span></h2>
+
+                <div class="comment-item">
+                    <div class="avatar-wrapper" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200"
+                             alt="Foto de Clara M." class="profile-img">
+                    </div>
+                    <div class="comment-content">
+                        <strong>@Clara_Explora</strong>
+                        <p>El artículo sobre Buenos Aires me hizo extrañar la ciudad con una intensidad inesperada. La descripción de la Feria de San Telmo —los anticuarios, los bailarines de tango en la Plaza Dorrego, el aroma a medialunas— es exactamente así. Pocas veces un texto captura tan bien esa mezcla de caos y belleza que es Buenos Aires. ¡Trabajo editorial extraordinario!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="avatar-wrapper" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200"
+                             alt="Foto de Diego S." class="profile-img">
+                    </div>
+                    <div class="comment-content">
+                        <strong>@Diego_Patagonia</strong>
+                        <p>Estuve frente al Perito Moreno el año pasado y la crónica lo describe con una precisión que me erizó la piel. El ruido del desprendimiento antes de ver caer el hielo es exactamente como dicen: primero el cañonazo, luego el silencio, luego la columna de agua. Ese hielo de 700 años cayendo al lago cambia la forma de entender el tiempo. Gracias por hacer justicia a la Patagonia.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="avatar-wrapper" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200"
+                             alt="Foto de Sofía T." class="profile-img">
+                    </div>
+                    <div class="comment-content">
+                        <strong>@Sofia_Gastronoma</strong>
+                        <p>El análisis de Lima como capital gastronómica es el mejor que leí en castellano. Trabajé dos años en restaurantes de Miraflores y es verdad que la cocina peruana no es solo alta cocina: es un sistema cultural completo. El ceviche de barrio del Callao y el menú de Central son parte de la misma identidad. Ojalá más viajeros entiendan Lima así y no solo como parada antes de Cusco.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="avatar-wrapper" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+                             alt="Foto de Marcos R." class="profile-img">
+                    </div>
+                    <div class="comment-content">
+                        <strong>@Marcos_Cordobes</strong>
+                        <p>Como cordobés, leer el artículo sobre la Docta me llenó de orgullo. La descripción de la Manzana Jesuítica es impecable, y lo de la Reforma Universitaria del 18 como transformadora de la educación latinoamericana es algo que los cordobeses sabemos pero el mundo pocas veces reconoce. Y tienen razón sobre los bares de Nueva Córdoba a las dos de la mañana: ahí la discusión nunca para.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="newsletter">
+          <h3>Suscríbete a nuestra crónica</h3>
+          <p>Recibe nuestras ediciones exclusivas e historias cautivadoras todos los viernes en tu buzón de correo.</p>
+          <form class="subscribe-form">
+            <label for="email" class="sr-only">Rellena tu correo electrónico</label>
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="btn-submit">Suscribir</button>
+          </form>
+        </div>
+
+        <div class="social-links">
+          <h3>Conecta con la comunidad</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" aria-label="Ir a nuestra página oficial de Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://x.com/?lang=es" aria-label="Ir a nuestro equipo en X (Twitter)">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Sigue nuestros viajes en Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 11.806-2.806 1.44 1.44 0 01-.806 2.806z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <h3>Sede Central</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.066870028212!2d-58.3815704!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11be22f1ce14c457!2sObelisco!5e0!3m2!1ses!2sar!4v1684343123456!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa interactivo de la oficina central en Buenos Aires"></iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Waldo's Travel. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+</body>
+</html>
