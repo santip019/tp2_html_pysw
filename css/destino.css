@@ -1,0 +1,324 @@
+/* Configuraciones globales usados del style.css */
+/*================================================
+                    Diseño de los Botones
+================================================*/
+
+/* los botones centrados */
+.filtros {
+    text-align: center;  
+    margin-bottom: 20px;
+}
+
+/* Ocultar inputs redondos manteniéndolos accesibles para teclado (sr-only) */
+.filtros input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.filtros input[type="radio"]:focus-visible + label {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+/* Dar diseño de botón a las etiquetas (Labels) */
+.filtros label {
+    display: inline-block; /* Esto hace que se muestren en línea */
+    padding: 10px 24px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 30px;      /* Bordes redondeados modernos */
+    cursor: pointer;          /* Mano al pasar el cursor */
+    font-weight: bold;          /* Letra negrita */
+    font-family: 'Noto Serif', serif;        
+    margin: 5px;              /* Margen entre botones */
+    transition: all 0.3s ease; /* Transición suave al hacer clic */
+    border: 2px solid transparent; 
+}
+
+/* Efecto hover al pasar el mouse por los botones */
+.filtros label:hover {
+    background-color: var(--surface-color);
+    transform: translateY(-2px); /* Se eleva*/
+}
+
+/* Darle color brillante solo al botón que está activo (:checked) */
+/* El signo '+' selecciona el "label" que esté inmediatamente después del input chequeado */
+.filtros input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*==================================================*/
+
+/*================================================
+                    FILTRO BOTON 
+================================================*/
+
+#cultural:checked ~ .galeria-masonry .naturaleza,
+#cultural:checked ~ .galeria-masonry .playa,
+#cultural:checked ~ .galeria-masonry .gastronomico,
+#cultural:checked ~ .galeria-masonry .religioso {
+    display: none;
+}
+
+#naturaleza:checked ~ .galeria-masonry .cultural,
+#naturaleza:checked ~ .galeria-masonry .playa,
+#naturaleza:checked ~ .galeria-masonry .gastronomico,
+#naturaleza:checked ~ .galeria-masonry .religioso {
+    display: none;
+}
+
+#playa:checked ~ .galeria-masonry .cultural,
+#playa:checked ~ .galeria-masonry .naturaleza,
+#playa:checked ~ .galeria-masonry .gastronomico,
+#playa:checked ~ .galeria-masonry .religioso {
+    display: none;
+}
+
+#gastronomico:checked ~ .galeria-masonry .cultural,
+#gastronomico:checked ~ .galeria-masonry .naturaleza,
+#gastronomico:checked ~ .galeria-masonry .playa,
+#gastronomico:checked ~ .galeria-masonry .religioso {
+    display: none;
+}
+
+#religioso:checked ~ .galeria-masonry .cultural,
+#religioso:checked ~ .galeria-masonry .naturaleza,
+#religioso:checked ~ .galeria-masonry .playa,
+#religioso:checked ~ .galeria-masonry .gastronomico {
+    display: none;
+}
+/*==================================================*/
+
+/*==================================================
+                    Diseño de las tarjetas
+==================================================*/
+
+.galeria-masonry{
+    display: grid;
+    /* 2 columnas en mobile para mantener el efecto masonry */
+    grid-template-columns: repeat(2, 1fr);
+    /* Filas pequeñas para dar el efecto masonry */
+    grid-auto-rows: 10px; 
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+/* para Tablet */
+@media screen and (min-width: 768px) {
+    .galeria-masonry {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+/* para PC */
+@media screen and (min-width: 1024px) {
+    .galeria-masonry {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* El article es el contenedor de cada destino */
+.galeria-masonry article {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    grid-row-end: span 20; /* Default proporcionado para móvil */
+}
+
+.galeria-masonry img{
+    width: 100%;
+    height: 100%;      /* Para que ocupe todo el alto */
+    object-fit: cover; /* Para que la imagen se ajuste al contenedor */
+    display: block;    /* Para que la imagen se muestre */
+    transition: transform 0.5s ease;
+}
+
+/* Alturas proporcionales para dispositivos pequeños (mobile) (1 span ≈ 25px por el gap) */
+.cultural { grid-row-end: span 7 !important; }
+.naturaleza { grid-row-end: span 9 !important; }
+.playa  { grid-row-end: span 20 !important; }
+.gastronomico  { grid-row-end: span 10 !important; }
+.religioso  { grid-row-end: span 12 !important; }
+
+/* Alturas originales para dispositivos medianos y grandes (1 span ≈ 30px por el gap) */
+@media screen and (min-width: 768px) {
+    .galeria-masonry article {
+        grid-row-end: span 10; /* Default PC */
+    }
+    .cultural { grid-row-end: span 8 !important; }
+    .naturaleza { grid-row-end: span 12 !important; }
+    .playa  { grid-row-end: span 25 !important; }
+    .gastronomico  { grid-row-end: span 14 !important; }
+    .religioso  { grid-row-end: span 15 !important; }
+}
+
+/* card sobrepuesto a la imagen */
+.galeria-masonry .card{
+    position: absolute;
+    bottom: 0px;       
+    left: 0px;        
+    right: 0px;        
+    
+    background-color: rgba(32, 44, 71, 0.9); 
+    backdrop-filter: blur(5px); /* Efecto vidrio difuminado por detrás */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    opacity: 0;                /* Se vuelve invisible */
+    visibility: hidden;        /* Evita que se pueda clickear mientras está oculto */
+    transform: translateY(20px); /* Se desplaza hacia abajo */
+}
+
+/* Estilos de los textos */
+.galeria-masonry .card h3 {
+    margin: 0 0 5px 0;
+    color: #ffffff;
+}
+
+.galeria-masonry .card p {
+    margin: 0 0 10px 0;
+    color: #e2e8f0; 
+    font-size: 0.9rem;
+}
+
+.galeria-masonry .card a {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.galeria-masonry .card .descripcion-breve {
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 5px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Animación el article completo */
+.galeria-masonry article:hover img {
+    transform: scale(1.08); /* Zoom foto */
+}
+
+.galeria-masonry article:hover .card {
+    transform: translateY(-5px); /*  eleva levemente */
+    background-color: rgba(32, 44, 71, 1);
+    opacity: 0.8;                /* Se vuelve visible */
+    visibility: visible;        /* Se activa para interacción */
+    transform: translateY(0);  /* Se desplaza hacia arriba */
+}
+
+
+
+/*==================================================
+                    Tabla Responsiva 
+==================================================*/
+.tablas { margin: 20px auto; max-width: 900px; padding: 10px 20px; } 
+.tablas h2 { text-align: center; color: var(--text-color); margin-bottom: 10px; }
+
+.tabla {
+    width: 100%; 
+    border-collapse: collapse;  /* une los bordes de las celdas*/
+    color: var(--text-color); /* Neutral (Palette) */
+    text-align: left; /*Alinea los textos a la izquierda*/
+}
+.tabla th, .tabla td {
+    padding: 8px 15px; border-bottom: 1px solid var(--surface-color); 
+}
+.tabla th { background-color: var(--card-bg); color: var(--text-color); font-weight: bold; } /*Color de los encabezados*/
+.tabla button { background: var(--primary-color); color: #FFF; padding: 5px 10px; border-radius: 5px; cursor: pointer; border: none;} /* Primary y Neutral */
+
+@media screen and (max-width: 768px) { /* Para pantallas pequeñas o menores a 768px*/
+    .tabla thead { display: none; } /*Oculta los encabezados*/
+    .tabla, .tabla tbody, .tabla tr, .tabla td { display: block; width: 100%; box-sizing: border-box; } /*Convierte la tabla en bloques*/
+    
+    .tabla tr { margin-bottom: 20px; border: 1px solid var(--surface-color); border-radius: 10px; padding: 10px;} /*Añade un borde y padding a cada fila*/
+    
+    .tabla td {
+        text-align: right; position: relative; padding-left: 50%; border-bottom: 1px solid var(--surface-color); /*Alinea los textos a la derecha*/
+    }
+    
+    .tabla td::before { 
+        content: attr(data-label); position: absolute; left: 10px; font-weight: bold; color: var(--text-gray); /*Añade el nombre de la columna antes del texto*/
+    }
+}
+.tabla button:focus-visible{
+    outline: 3px solid var(--secondary-color); /* Tertiary (Palette) */
+    outline-offset: 2px;
+}
+.tabla button:hover{
+    background-color: var(--secondary-color); /* Hover en tono primario más oscuro mantieniendo contraste AAA */
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.tabla tr:hover{
+    background-color: var(--surface-color); /* Primary (Palette) con opacidad sobre fondo oscuro */
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+.tabla th:hover{
+    background-color: var(--surface-color); /* Primary (Palette) con opacidad */
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+/*==================================================*/
+
+/*==================================================
+                    Tabla Filtro
+==================================================*/
+
+#cultural:checked ~ .tablas .tabla  tbody tr.naturaleza,
+#cultural:checked ~ .tablas .tabla  tbody tr.playa,
+#cultural:checked ~ .tablas .tabla  tbody tr.gastronomico,
+#cultural:checked ~ .tablas .tabla  tbody tr.religioso {
+    display: none;
+}
+
+.filtros #naturaleza:checked ~ .tablas .tabla  tbody tr.cultural,
+.filtros #naturaleza:checked ~ .tablas .tabla  tbody tr.playa,
+.filtros #naturaleza:checked ~ .tablas .tabla  tbody tr.gastronomico,
+.filtros #naturaleza:checked ~ .tablas .tabla  tbody tr.religioso {
+    display: none;
+}
+
+.filtros #playa:checked ~ .tablas .tabla  tbody tr.cultural,
+.filtros #playa:checked ~ .tablas .tabla  tbody tr.naturaleza,
+.filtros #playa:checked ~ .tablas .tabla  tbody tr.gastronomico,
+.filtros #playa:checked ~ .tablas .tabla  tbody tr.religioso {
+    display: none;
+}
+
+.filtros #gastronomico:checked ~ .tablas .tabla  tbody tr.cultural,
+.filtros #gastronomico:checked ~ .tablas .tabla  tbody tr.naturaleza,
+.filtros #gastronomico:checked ~ .tablas .tabla  tbody tr.playa,
+.filtros #gastronomico:checked ~ .tablas .tabla  tbody tr.religioso {
+    display: none;
+}
+
+.filtros #religioso:checked ~ .tablas .tabla  tbody tr.cultural,
+.filtros #religioso:checked ~ .tablas .tabla  tbody tr.naturaleza,
+.filtros #religioso:checked ~ .tablas .tabla  tbody tr.playa,
+.filtros #religioso:checked ~ .tablas .tabla  tbody tr.gastronomico {
+    display: none;
+}
+
+/*==================================================*/

@@ -1,44 +1,7 @@
-:root {
-            --primary: #00327d;
-            --primary-container: #0047ab;
-            --on-primary: #ffffff;
-            --secondary: #ac3509;
-            --surface: #f8f9fa;
-            --surface-container-low: #f3f4f5;
-            --surface-container-lowest: #ffffff;
-            --outline: #737784;
-            --outline-variant: #c3c6d5;
-            --error: #ba1a1a;
-            --error-container: #ffdad6;
-            --headline-font: 'Noto Serif', serif;
-            --body-font: 'Manrope', sans-serif;
-            --radius-lg: 0.25rem;
-            --radius-xl: 0.5rem;
-            --shadow-editorial: 0 32px 64px -12px rgba(25, 28, 29, 0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--surface);
-            font-family: var(--body-font);
-            color: #191c1d;
-            line-height: 1.5;
-        }
-
-        /* Accesibilidad - Focus Visible */
-        :focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 3px;
-            border-radius: 2px;
-        }
+        /* Estilos globales (:root, *, body, :focus-visible genérico) heredados de style.css */
         
         input:focus-visible, textarea:focus-visible, select:focus-visible, label:focus-visible {
-            outline: 3px solid var(--primary);
+            outline: 3px solid #00327d;
             outline-offset: 1px;
         }
 
@@ -75,7 +38,7 @@
         }
 
         .label-tag {
-            color: var(--secondary);
+            color: #ac3509;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -85,14 +48,14 @@
         }
 
         h1 {
-            font-family: var(--headline-font);
+            font-family: 'Noto Serif', serif;
             font-size: 3rem;
-            color: var(--primary);
+            color: #00327d;
             line-height: 1.1;
         }
 
         .description {
-            color: var(--outline);
+            color: #737784;
             font-size: 1.125rem;
             margin-top: 1.5rem;
         }
@@ -110,38 +73,38 @@
         }
 
         .card {
-            background: var(--surface-container-low);
+            background: #f3f4f5;
             padding: 1.5rem;
             border-radius: 0.75rem;
             transition: all 0.3s;
         }
 
         .card:hover {
-            background: var(--surface-container-lowest);
+            background: #ffffff;
             transform: translateY(-4px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         /* SVG Animation in info cards */
         .card svg {
-            color: var(--secondary);
+            color: #ac3509;
             margin-bottom: 1rem;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
         }
         
         .card:hover svg {
             transform: rotate(15deg) scale(1.15);
-            color: var(--primary);
+            color: #00327d;
         }
 
         .card h3 {
-            font-family: var(--headline-font);
+            font-family: 'Noto Serif', serif;
             margin-bottom: 0.5rem;
         }
 
         .card p {
             font-size: 0.875rem;
-            color: var(--outline);
+            color: #737784;
         }
 
         .image-container {
@@ -166,7 +129,7 @@
 
         /* Formulario de Contacto Avanzado */
         .contact-form-section {
-            background: var(--surface-container-lowest);
+            background: #ffffff;
             padding: 2.5rem;
             border-radius: 1.25rem;
             border: 1px solid rgba(195, 198, 213, 0.1);
@@ -177,9 +140,9 @@
         .contact-form-section h3 {
             text-align: center;
             font-size: 20px;
-            color: var(--primary);
+            color: #00327d;
             margin-bottom: 1.5rem;
-            font-family: var(--headline-font);
+            font-family: 'Noto Serif', serif;
             display: none;
         }
 
@@ -201,7 +164,7 @@
         .form-group label {
             font-size: 0.875rem;
             margin-bottom: 0.5rem;
-            color: var(--outline);
+            color: #737784;
             font-weight: 600;
         }
 
@@ -209,12 +172,12 @@
         .form-group textarea,
         .form-group select {
             padding: 0.75rem;
-            border: 1px solid var(--outline-variant);
-            border-radius: var(--radius-lg);
+            border: 1px solid #c3c6d5;
+            border-radius: 0.25rem;
             font-family: inherit;
             font-size: 1rem;
             transition: all 0.3s;
-            background: var(--surface-container-low);
+            background: #f3f4f5;
             color: #191c1d;
         }
 
@@ -222,7 +185,7 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: #00327d;
             background: rgba(218, 226, 255, 0.2);
         }
 
@@ -255,17 +218,17 @@
         .submit-label, .modal-btn {
             grid-column: 1 / -1;
             padding: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-container));
-            color: var(--on-primary);
+            background: linear-gradient(135deg, #00327d, #0047ab);
+            color: #ffffff;
             border: none;
-            border-radius: var(--radius-xl);
+            border-radius: 0.5rem;
             font-size: 1.125rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            font-family: var(--body-font);
+            font-family: 'Manrope', sans-serif;
             font-weight: 700;
             margin-top: 1rem;
             text-align: center;
@@ -337,7 +300,7 @@
         }
 
         .modal-content {
-            background: var(--surface-container-lowest);
+            background: #ffffff;
             padding: 3rem;
             border-radius: 1rem;
             text-align: center;
@@ -352,7 +315,7 @@
         }
 
         .modal-content svg {
-            color: var(--primary);
+            color: #00327d;
             margin-bottom: 1rem;
             background: rgba(0, 71, 171, 0.1);
             border-radius: 50%;
@@ -366,12 +329,103 @@
         }
 
         .modal-title {
-            font-family: var(--headline-font);
+            font-family: 'Noto Serif', serif;
             font-size: 1.5rem;
-            color: var(--primary);
+            color: #00327d;
             margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
             .contact-form { grid-template-columns: 1fr; }
+        }
+
+        /*==================================================
+                    Modo Oscuro - Contacto
+        ==================================================*/
+        body:has(#dark-mode-toggle:checked) h1 {
+            color: #4a8ef0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .label-tag {
+            color: #e87350;
+        }
+
+        body:has(#dark-mode-toggle:checked) .description {
+            color: #a0a3b0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .card {
+            background: #2a2a2a;
+        }
+
+        body:has(#dark-mode-toggle:checked) .card:hover {
+            background: #333333;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        body:has(#dark-mode-toggle:checked) .card h3 {
+            color: #4a8ef0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .card p {
+            color: #a0a3b0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .card svg {
+            color: #e87350;
+        }
+
+        body:has(#dark-mode-toggle:checked) .card:hover svg {
+            color: #4a8ef0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .contact-form-section {
+            background: #2a2a2a;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body:has(#dark-mode-toggle:checked) .contact-form-section h3 {
+            color: #4a8ef0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .form-group label {
+            color: #a0a3b0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .form-group input,
+        body:has(#dark-mode-toggle:checked) .form-group textarea,
+        body:has(#dark-mode-toggle:checked) .form-group select {
+            background: #1e1e1e;
+            border-color: #444;
+            color: #e4e4e4;
+        }
+
+        body:has(#dark-mode-toggle:checked) .form-group input:focus,
+        body:has(#dark-mode-toggle:checked) .form-group textarea:focus,
+        body:has(#dark-mode-toggle:checked) .form-group select:focus {
+            border-color: #4a8ef0;
+            background: rgba(74, 142, 240, 0.1);
+        }
+
+        body:has(#dark-mode-toggle:checked) .submit-label,
+        body:has(#dark-mode-toggle:checked) .modal-btn {
+            background: linear-gradient(135deg, #4a8ef0, #2a65bc);
+        }
+
+        body:has(#dark-mode-toggle:checked) .modal-content {
+            background: #2a2a2a;
+            color: #e4e4e4;
+        }
+
+        body:has(#dark-mode-toggle:checked) .modal-content svg {
+            color: #4a8ef0;
+            background: rgba(74, 142, 240, 0.15);
+        }
+
+        body:has(#dark-mode-toggle:checked) .modal-title {
+            color: #4a8ef0;
+        }
+
+        body:has(#dark-mode-toggle:checked) .modal-content p {
+            color: #a0a3b0;
         }
