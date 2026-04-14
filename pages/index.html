@@ -58,6 +58,144 @@
     </div>
   </header>
 
-  
+  <main>
+    <section class="hero">
+        <!-- video de fondo-->
+      <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+        <source src="../assets/video/video_de_fondo.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <!--texto animado-->
+        <h1 class="animate-title hero-title">Descubre tu próxima aventura</h1>
+        <p class="animate-subtitle">Redefiniendo el lujo en cada destino del mundo.</p>
+      </div>
+    </section>
+
+    <section id="destinos" class="destinations">
+      <h2 class="section-title">Destinos Exclusivos</h2>
+      
+      <!-- Destinos destacados con cards-->
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=600&auto=format&fit=crop" alt="Vista del icónico Obelisco y Avenida 9 de Julio en Buenos Aires, Argentina" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Buenos Aires, Argentina</h3>
+            <p>Descubre el encanto porteño, la cuna del tango, su vibrante cultura y gastronomía inigualable.</p>
+            <a href="destinos.html" class="btn-link" aria-label="Explorar nuestras guías curadas en Buenos Aires">Explorar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="https://lh4.googleusercontent.com/proxy/SMUCKbn601merC1F5il-7HomV8KdTpHGTWuxWDyRIK4wdVwBP-QFuu2dDXivcrjXhEIbonpFxLC56sp8S72a-F7LXKf0MQjmLDIAx5lN89u_zWcQJlmiU9W8VLTEkYHQ" alt="Paisajes montañosos y lagos cristalinos en Bariloche, Argentina" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Bariloche, Argentina</h3>
+            <p>Explora paisajes patagónicos de ensueño, majestuosos lagos cristalinos y cerros nevados.</p>
+            <a href="destinos.html" class="btn-link" aria-label="Explorar nuestras guías curadas en Bariloche">Explorar</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=600&auto=format&fit=crop" alt="Vista icónica del Coliseo en Roma, Italia" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Roma, Italia</h3>
+            <p>Historia eterna en cada rincón empedrado y atardeceres dorados descubriendo el imperio cláscio.</p>
+            <a href="destinos.html" class="btn-link" aria-label="Explorar nuestras guías curadas en Roma">Explorar</a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Contador animado-->
+      <div class="counter-section">
+        <span class="counter-animate" aria-hidden="true"></span>
+        <p>Viajeros satisfechos descubriendo con nuestras Membresías Premium</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2 class="section-title">Lo que dicen nuestros viajeros</h2>
+
+      <!--Testimonios de clientes en un carrusel-->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Item 1 -->
+          <article class="testimonial-card">
+            <p>"Una experiencia verdaderamente transformadora en Kioto. La atención al detalle de los guías locales me hizo descubrir templos que nunca encontraría por cuenta propia."</p>
+            <h4>— Elena M.</h4>
+          </article>
+          <!-- Item 2 -->
+          <article class="testimonial-card">
+            <p>"La mejor manera de redescubrir París. Recomendaciones de alta gastronomía excepcionales y accesos privados inigualables a través de The Editorial Traveler."</p>
+            <h4>— Carlos T.</h4>
+          </article>
+          <!-- Item 3 -->
+          <article class="testimonial-card">
+            <p>"La conserjería VIP superó completamente todas mis expectativas; solucionaron cada imprevisto del viaje mucho antes de que yo siquiera lo notara. Recomendado al cien por ciento."</p>
+            <h4>— Laura P.</h4>
+          </article>
+          <!-- Item 4 -->
+          <article class="testimonial-card">
+            <p>"Nuestro fin de semana en Roma se sintió como una película. Cada momento fue curado a la perfección. Es la única red de turismo que realmente vale la pena contratar."</p>
+            <h4>— David G.</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="main-footer">
+    <div class="footer-grid">
+
+        <!--Formulario para suscribirse a un newsletter.-->
+      <div class="newsletter">
+        <h3>Suscríbete a nuestra crónica</h3>
+        <p>Recibe nuestras ediciones exclusivas e historias cautivadoras todos los viernes en tu buzón de correo.</p>
+        <form class="subscribe-form">
+          <label for="email" class="sr-only">Rellena tu correo electrónico</label>
+          <input type="email" id="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn-submit">Suscribir</button>
+        </form>
+      </div>
+      
+      <!--Enlaces a redes sociales.-->
+      <div class="social-links">
+        <h3>Conecta con la comunidad</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" aria-label="Ir a nuestra página oficial de Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://x.com/?lang=es" aria-label="Ir a nuestro equipo en X (Twitter)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+               <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" aria-label="Sigue nuestros viajes en Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 11.806-2.806 1.44 1.44 0 01-.806 2.806z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!--Mapa interactivo-->
+      <div class="map-container">
+        <h3>Sede Central</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.066870028212!2d-58.3815704!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11be22f1ce14c457!2sObelisco!5e0!3m2!1ses!2sar!4v1684343123456!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa interactivo de la oficina central en Buenos Aires"></iframe>
+      </div>
+    </div>
+    
+    <!--Mapa interactivo-->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Waldo's Travel. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
