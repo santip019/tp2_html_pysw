@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waldo's Travel</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- Checkbox para controlar el modo oscuro -->
+  <input type="checkbox" id="dark-mode-toggle" class="sr-only" aria-hidden="true" tabindex="-1">
+
+  <header class="main-header">
+    <div class="header-container">
+        <!-- Logo de la agencia -->
+      <a href="index.html" class="logo">Waldo's Travel</a>
+      
+      <!-- Opciones del menú principal-->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          
+          <li class="has-mega-menu">
+            <a href="destinos.html">Destinos</a>
+            <!-- Sub menu -->
+            <div class="mega-menu">
+              <div class="mega-menu-column">
+                <h4>Nacionales</h4>
+                <ul aria-label="Destinos en Europa">
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">San Juan</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-column">
+                <h4>Internacionales</h4>
+                <ul aria-label="Destinos en Asia">
+                  <li><a href="#">Colombia</a></li>
+                  <li><a href="#">Cancún</a></li>
+                  <li><a href="#">Brasil</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          
+          <li><a href="precios.html">Membresías</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón para alternar el modo oscuro -->
+      <label for="dark-mode-toggle" class="dark-mode-btn" role="button" tabindex="0" aria-label="Alternar modo oscuro">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  
+</body>
+</html>
