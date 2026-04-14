@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap');
+
+:root {
+  /* Colores */
+  --primary-color: #1a4b8f;
+  --secondary-color: #377fe6;
+  --text-gray: #8a8c8f;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --surface-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --footer-bg: #1a4b8f;
+  
+  /* Fuentes */
+  --font-title: 'Noto Serif', serif;
+  --font-text: 'Manrope', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #e4e4e4;
+    --surface-color: #1e1e1e;
+    --card-bg: #2a2a2a;
+    --primary-color: #4a8ef0;
+    --footer-bg: #0d2647;
+  }
+  
+  .main-header {
+    background: rgba(18, 18, 18, 0.8);
+  }
+}
+
+/* Checkbox botón modo oscuro */
+body:has(#dark-mode-toggle:checked) {
+  --bg-color: #121212;
+  --text-color: #e4e4e4;
+  --surface-color: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --primary-color: #4a8ef0;
+  --footer-bg: #0d2647;
+}
+
+body:has(#dark-mode-toggle:checked) .main-header {
+  background: rgba(18, 18, 18, 0.8);
+}
+
+/* Clases de accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header y Nav */
+.main-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.main-nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-nav a {
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--secondary-color);
+}
+
+/* Mega Menu */
+.has-mega-menu {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  width: 400px;
+  background-color: var(--card-bg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.has-mega-menu:hover .mega-menu,
+.has-mega-menu:focus-within .mega-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-menu-column h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--text-gray);
+  padding-bottom: 0.5rem;
+}
+
+.mega-menu-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mega-menu-column a {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.mega-menu-column a:hover {
+  padding-left: 5px;
+  color: var(--secondary-color);
+}
+
+/* Boton modo oscuro */
+.dark-mode-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode-btn:hover, .dark-mode-btn:focus-visible {
+  background: var(--surface-color);
+  color: var(--secondary-color);
+}
