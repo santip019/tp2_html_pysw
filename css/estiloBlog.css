@@ -90,40 +90,12 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   4. SPINNER DE CARGA  (Keyframe CSS)
-   ───────────────────────────────────── */
-.loader-container {
-    position: fixed;
-    inset: 0;
-    background-color: var(--bg-color);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: fadeOutLoader 1.5s 1.5s forwards;
-}
-.spinner {
-    width: 56px;
-    height: 56px;
-    border: 5px solid var(--outline-variant);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-@keyframes fadeOutLoader {
-    to { opacity: 0; visibility: hidden; z-index: -1; }
-}
-
-/* ─────────────────────────────────────
-   5. SCROLL SNAP
+   4. SCROLL SNAP
    ───────────────────────────────────── */
 .snap-section { scroll-snap-align: start; }
 
 /* ─────────────────────────────────────
-   6. BOTÓN MODO LECTURA
+   5. BOTÓN MODO LECTURA
    ───────────────────────────────────── */
 .theme-switcher {
     position: fixed;
@@ -154,7 +126,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   7. HEADER
+   6. HEADER
    ───────────────────────────────────── */
 .header-mag {
     height: 88vh;
@@ -230,7 +202,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   8. CONTENEDOR CENTRAL
+   7. CONTENEDOR CENTRAL
    ───────────────────────────────────── */
 .container {
     max-width: 1280px;
@@ -239,7 +211,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   9. FILTROS 
+   8. FILTROS 
 
    Los inputs están en <body> ANTES de .app-wrapper
    para que el combinador ~ pueda alcanzar .news-grid
@@ -294,7 +266,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   10. GRILLA TIPO "NEWSPAPER" (CSS Grid)
+   9. GRILLA TIPO "NEWSPAPER" (CSS Grid)
    ───────────────────────────────────── */
 .news-grid {
     display: grid;
@@ -351,7 +323,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   11. CUERPO DE TARJETA
+   10. CUERPO DE TARJETA
    ───────────────────────────────────── */
 .card-body {
     padding: 3.5rem 4.5rem;
@@ -414,7 +386,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   12. TIPOGRAFÍA DE REVISTA
+   11. TIPOGRAFÍA DE REVISTA
    ───────────────────────────────────── */
 
 /* Letra capitular (drop cap) */
@@ -468,7 +440,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   13. SCROLL REVEAL (animation-timeline)
+   12. SCROLL REVEAL (animation-timeline)
        Keyframes CSS 
    ───────────────────────────────────── */
 @keyframes reveal-animation {
@@ -489,7 +461,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────
-   14. SECCIÓN DE COMENTARIOS
+   13. SECCIÓN DE COMENTARIOS
        Avatares hexagonales con clip-path
        y pseudoelementos 
    ───────────────────────────────────── */
