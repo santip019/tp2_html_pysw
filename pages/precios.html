@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Precios - The Editorial Traveler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/precios.css">
+</head>
+
+<body>
+  <!-- Checkbox para controlar el modo oscuro -->
+  <input type="checkbox" id="dark-mode-toggle" class="sr-only" aria-hidden="true" tabindex="-1">
+
+  <header class="main-header">
+    <div class="header-container">
+        <!-- Logo de la agencia -->
+      <a href="index.html" class="logo">Waldo's Travel</a>
+      
+      <!-- Opciones del menú principal-->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          
+          <li class="has-mega-menu">
+            <a href="destinos.html">Destinos</a>
+            <!-- Sub menu -->
+            <div class="mega-menu">
+              <div class="mega-menu-column">
+                <h4>Nacionales</h4>
+                <ul aria-label="Destinos en Europa">
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">San Juan</a></li>
+                </ul>
+              </div>
+              <div class="mega-menu-column">
+                <h4>Internacionales</h4>
+                <ul aria-label="Destinos en Asia">
+                  <li><a href="#">Colombia</a></li>
+                  <li><a href="#">Cancún</a></li>
+                  <li><a href="#">Brasil</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          
+          <li><a href="precios.html">Membresías</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón para alternar el modo oscuro -->
+      <label for="dark-mode-toggle" class="dark-mode-btn" role="button" tabindex="0" aria-label="Alternar modo oscuro">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+    <main>
+        <header class="hero">
+            <h1>Membresías diseñadas para el viajero moderno.</h1>
+            <p>Acceso exclusivo a curadurías editoriales, conserjería digital y una red global de experiencias auténticas.</p>
+        </header>
+
+        <div class="pricing-grid">
+            <!-- Esencial -->
+            <div class="pricing-card">
+                <span class="card-label">Plan de Entrada</span>
+                <h2 class="card-title">Esencial</h2>
+                <div class="price">
+                    <span class="amount">€49</span>
+                    <span class="period">/mes</span>
+                </div>
+                <ul class="features">
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span class="tooltip-container" tabindex="0" aria-label="Información sobre las Guías editoriales mensuales">
+                            Guías editoriales mensuales
+                            <span class="tooltip-text">Acceso a 12 destinos curados por nuestros editores cada mes con mapas interactivos.</span>
+                        </span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Red de agencias locales</span>
+                    </li>
+                    <li class="feature-item disabled">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/></svg>
+                        <span>Conserjería 24/7</span>
+                    </li>
+                    <li class="feature-item disabled">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/></svg>
+                        <span>Upgrades en hoteles</span>
+                    </li>
+                </ul>
+                <button class="card-btn" aria-label="Comenzar con el plan Esencial gratis">Comenzar Gratis</button>
+            </div>
+            <!-- Traveler Elite -->
+            <div class="pricing-card recommended">
+                <div class="badge">Recomendado</div>
+                <span class="card-label">Experiencia Completa</span>
+                <h2 class="card-title">Traveler Elite</h2>
+                <div class="price">
+                    <span class="amount">€129</span>
+                    <span class="period">/mes</span>
+                </div>
+                <ul class="features">
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        <span class="tooltip-container" tabindex="0" aria-label="Información sobre Todo lo del plan Esencial">
+                            Todo lo del plan Esencial
+                            <span class="tooltip-text">Incluye acceso total a la librería histórica de guías y mapas offline.</span>
+                        </span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        <span class="tooltip-container" tabindex="0" aria-label="Información sobre Conserjería Digital 24/7">
+                            Conserjería Digital 24/7
+                            <span class="tooltip-text">Incluye acceso ilimitado a recomendaciones exclusivas y atención personalizada mundial.</span>
+                        </span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        <span>Desayuno y WiFi en hoteles</span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        <span>Seguro de viaje global</span>
+                    </li>
+                </ul>
+                <button class="card-btn" aria-label="Suscribirse al plan Traveler Elite Ahora">Suscribirse Ahora</button>
+            </div>
+            <!-- Curador -->
+            <div class="pricing-card">
+                <span class="card-label">Para Grupos &amp; Agentes</span>
+                <h2 class="card-title">Curador</h2>
+                <div class="price">
+                    <span class="amount">€349</span>
+                    <span class="period">/mes</span>
+                </div>
+                <ul class="features">
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>5 Cuentas Traveler Elite</span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span class="tooltip-container" tabindex="0" aria-label="Información sobre Herramientas de itinerario">
+                            Herramientas de itinerario
+                            <span class="tooltip-text">Software profesional para crear y compartir planes de viaje con clientes o familiares.</span>
+                        </span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Prioridad en reservas</span>
+                    </li>
+                    <li class="feature-item">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>API de destinos propia</span>
+                    </li>
+                </ul>
+                <button class="card-btn" aria-label="Contactar a Ventas para el plan Curador">Contactar Ventas</button>
+            </div>
+        </div>
+
+        <section class="comparison-section">
+            <h3>Comparativa Detallada</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Características</th>
+                            <th>Esencial</th>
+                            <th class="highlight">Traveler Elite</th>
+                            <th>Curador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Acceso a Revistas Digitales</td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td class="highlight"><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Mapas de Google Personalizados</td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td class="highlight"><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Soporte por WhatsApp</td>
+                            <td style="color: var(--outline-variant); font-weight: bold; font-family: 'Manrope', sans-serif;">—</td>
+                            <td class="highlight"><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Invitaciones a Eventos VIP</td>
+                            <td style="color: var(--outline-variant); font-weight: bold; font-family: 'Manrope', sans-serif;">—</td>
+                            <td class="highlight"><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Agente de Viajes Dedicado</td>
+                            <td style="color: var(--outline-variant); font-weight: bold; font-family: 'Manrope', sans-serif;">—</td>
+                            <td class="highlight" style="color: var(--outline-variant); font-weight: bold; font-family: 'Manrope', sans-serif;">—</td>
+                            <td><svg viewBox="0 0 24 24" width="24" height="24" fill="var(--primary)" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        </main>
+
+  <footer class="main-footer">
+    <div class="footer-grid">
+
+        <!--Formulario para suscribirse a un newsletter.-->
+      <div class="newsletter">
+        <h3>Suscríbete a nuestra crónica</h3>
+        <p>Recibe nuestras ediciones exclusivas e historias cautivadoras todos los viernes en tu buzón de correo.</p>
+        <form class="subscribe-form">
+          <label for="email" class="sr-only">Rellena tu correo electrónico</label>
+          <input type="email" id="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn-submit">Suscribir</button>
+        </form>
+      </div>
+      
+      <!--Enlaces a redes sociales.-->
+      <div class="social-links">
+        <h3>Conecta con la comunidad</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" aria-label="Ir a nuestra página oficial de Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://x.com/?lang=es" aria-label="Ir a nuestro equipo en X (Twitter)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+               <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" aria-label="Sigue nuestros viajes en Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 11.806-2.806 1.44 1.44 0 01-.806 2.806z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!--Mapa interactivo-->
+      <div class="map-container">
+        <h3>Sede Central</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.066870028212!2d-58.3815704!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11be22f1ce14c457!2sObelisco!5e0!3m2!1ses!2sar!4v1684343123456!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa interactivo de la oficina central en Buenos Aires"></iframe>
+      </div>
+    </div>
+    
+    <!--Mapa interactivo-->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Waldo's Travel. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
